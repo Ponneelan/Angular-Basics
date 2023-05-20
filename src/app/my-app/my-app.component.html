@@ -1,0 +1,70 @@
+<!-- interpolation -->
+<h1>{{"Welcome " +name}}</h1>
+<input type="text" value="{{name}}">
+
+
+
+<h1>{{"Welcome " +name}}</h1>
+<input type="text" [value]="name" disabled="{{isDisable}}">
+
+
+<h1>{{"Welcome " +name}}</h1>
+<!-- propoer Binding -->
+<input type="text" (change)="change($event)" [value]="name" [disabled]="isDisable">
+
+<input type="text" #myInput name="" value="Ponneelan" id="">
+
+<!-- Event Binging -->
+<button (click)="onClick($event)">Click</button>
+
+
+<!-- Reference -->
+{{myInput.value}}
+
+
+<!-- Ng If -->
+<p *ngIf="show">Ng IF</p>
+<p *ngIf="!show">not Ng IF</p>
+
+<p *ngIf="show">Ng IF</p>
+
+
+<!-- ng Template -->
+<p *ngIf="show; else elseBlock;">yes</p>
+<ng-template #elseBlock>
+    Not 
+</ng-template>
+
+
+<!-- Ng for -->
+<ul>
+    <li *ngFor="let e of arr;first as f">{{f+"  "}}{{e}}</li>
+</ul>
+
+<!-- ng For table -->
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let e of json">
+            <th>{{e.id}}</th>
+            <th>{{e.name}}</th>
+            <th>{{e.age}}</th>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<!-- Two Way Data Bingding -->
+<br><br>
+<input type="text" #aaa [(ngModel)]="inputData">
+{{inputData}}
+
+<button (click)="tempRef(aaa.value)">My temp</button>
+
+
