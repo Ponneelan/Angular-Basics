@@ -9,7 +9,7 @@
 
 
 <h1>{{"Welcome " +name}}</h1>
-<!-- propoer Binding -->
+<!-- property Binding -->
 <input type="text" (change)="change($event)" [value]="name" [disabled]="isDisable">
 
 <input type="text" #myInput name="" value="Ponneelan" id="">
@@ -18,7 +18,7 @@
 <button (click)="onClick($event)">Click</button>
 
 
-<!-- Reference -->
+<!-- Template  Reference -->
 {{myInput.value}}
 
 
