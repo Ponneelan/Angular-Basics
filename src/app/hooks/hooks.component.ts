@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges, AfterViewInit,AfterContentInit,AfterContentChecked,AfterViewChecked,OnDestroy, DoCheck } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, AfterViewInit,AfterContentInit,AfterContentChecked,AfterViewChecked,OnDestroy, DoCheck, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hooks',
@@ -6,6 +6,11 @@ import { Component, OnInit, OnChanges, SimpleChanges, AfterViewInit,AfterContent
   styleUrls: ['./hooks.component.scss']
 })
 export class HooksComponent implements OnInit,OnChanges,AfterViewInit,AfterContentChecked,AfterContentInit,AfterViewChecked, OnDestroy, DoCheck{
+  
+  @Input() public name:string = "";
+  @Input() public json:any ;
+  @Input() public array:any;
+  @Input('aliasName') alias:any;
   constructor(){
     console.log('1 inside constructor')
   }

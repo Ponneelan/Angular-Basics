@@ -1,3 +1,5 @@
-<h1>Hi </h1>
+<h1>Hi {{name}} </h1>
 <!-- <app-my-app></app-my-app> -->
-<app-hooks></app-hooks>
+ <!-- <app-hooks [name]="name" [json]="json" [array]="arr" [aliasName]="aliasName"></app-hooks> -->
+ <!-- <app-parent-to-child [userName]="name"></app-parent-to-child> -->
+<app-chile-to-parent (userName)="messageFromChild($event)"></app-chile-to-parent>

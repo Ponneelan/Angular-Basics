@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyAppComponent } from './my-app/my-app.component';
 import { HooksComponent } from './hooks/hooks.component';
+import { ChileToParentComponent } from './chile-to-parent/chile-to-parent.component';
+import { ParentToChildComponent } from './parent-to-child/parent-to-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyAppComponent,
-    HooksComponent
+    HooksComponent,
+    ChileToParentComponent,
+    ParentToChildComponent
   ],
   imports: [
     BrowserModule,
