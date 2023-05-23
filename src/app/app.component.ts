@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { ChileToParentComponent,Test } from '../app/chile-to-parent/chile-to-parent.component'
 @Component({
   selector: 'app-root',
@@ -18,10 +18,17 @@ export class AppComponent implements AfterViewInit {
 
   @ViewChild(ChileToParentComponent) viewChiled = new ChileToParentComponent();
 
+  @ViewChildren(ChileToParentComponent) viewChildrens!:QueryList<ChileToParentComponent>;
+
   ngAfterViewInit(): void {
     setTimeout(() => {
-      // this.name = this.viewChiled.name;
-      // console.log(this.viewChiled.obj);
+      console.log("viewChile",this.viewChiled.name);
+      // console.log('first',this.viewChildrens);
+      // console.log('first',this.viewChildrens);
+      this.viewChildrens.forEach((data,index)=>{
+        console.log(index,". ",data['name'])
+      });
+
     }, 3000);
   }
 

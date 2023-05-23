@@ -22,14 +22,15 @@ export class ChileToParentComponent implements OnInit {
     this.Emiter.emit(this.obj);
   }
   ngOnInit() {
-    setTimeout(() => {
+    // console.log("from Child",this.name);
+    // setTimeout(() => {
       // this.userName.emit("Finstein")
       // this.Emiter.emit(this.obj);
       // this.Emiter.emit(this.array);
-      this.Emiter.emit(1);
-      this.Emiter.emit('Ponneelan');
-      this.Emiter.emit(this.testObj);
-    }, 3000);
+      // this.Emiter.emit(1);
+      // this.Emiter.emit('Ponneelan');
+      // this.Emiter.emit(this.testObj);
+    // }, 3000);
   }
 }
 
