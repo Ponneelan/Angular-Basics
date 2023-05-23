@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { ChileToParentComponent } from '../app/chile-to-parent/chile-to-parent.component'
+import { ChileToParentComponent,Test } from '../app/chile-to-parent/chile-to-parent.component'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,12 +20,12 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.name = this.viewChiled.name;
+      // this.name = this.viewChiled.name;
+      // console.log(this.viewChiled.obj);
     }, 3000);
   }
-  
-  messageFromChild(event: string) {
+
+  messageFromChild(event: any) {
     console.warn(event);
-    this.name = event;
   }
 }
