@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chile-to-parent',
@@ -7,12 +7,13 @@ import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 })
 export class ChileToParentComponent implements OnInit {
   @Output() public userName = new EventEmitter();
-  passData() {
-    this.userName.emit("vasanth")
-  }
+  @Input() public name = "";
+  // passData() {
+  //   this.userName.emit("vasanth")
+  // }
   ngOnInit() {
     setTimeout(() => {
-      this.userName.emit("Finstein")
+      // this.userName.emit("Finstein")
     }, 3000);
   }
 }
